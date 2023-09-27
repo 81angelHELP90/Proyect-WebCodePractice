@@ -1,0 +1,500 @@
+/* ##### ESTILOS GLOBALES #### */
+@font-face{
+    font-family: "Font-Custom2";
+    src: url("../../assets/font/Tulpen_One/TulpenOne-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Font-Custom3";
+    src: url("../../assets/font/Roboto/Roboto-Medium.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap");
+
+body{
+    margin: 0;
+}
+
+h1, h2, h3, span, button, a{
+    font-family: "Font-Custom3";
+    font-size: large;
+}
+
+select, select option{
+    font-family: "Font-Custom3";
+}
+
+input{
+    padding-left: 10px;
+}
+
+.btn-custom {
+    background-color: rgb(106, 196, 252);
+    margin-bottom: 10px;
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-custom:hover {
+    background-color: #fff;
+    border: 2px solid rgb(106, 196, 252);
+}
+
+.btn-custom a{
+    color: black;
+    text-decoration: none;
+}
+
+/* posicion global*/
+.position-general {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-box span{
+    margin-right: 10px;
+    padding-bottom: 20px;
+}
+
+/* #### PAGE login ###*/
+.header-login, .header-createAccount, .header-help {
+    height: 150px;
+}
+
+.header-login #logo, 
+.header-createAccount #logo{
+    width: 90px;
+    height: 90px;
+}
+
+#section-login {
+    padding-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-Box input {
+    display: block !important; 
+    margin: 0 0 10px 0;
+    border: 2px solid rgb(106, 196, 252);
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+}
+
+.login-Box span {
+    display: block !important; 
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+}
+
+.box-btn-login {
+    margin-bottom: 100px;
+}
+
+/* #### FIN PAGE login ###*/
+/*---------------------------------------------*/
+/* #### PAGE HOME #### */
+header{
+    background-color: rgb(106, 196, 252);
+}
+
+.header-Home img, input, button{
+    margin-top: 20px;
+    border: 0;
+}
+
+.header-Home button {
+    background-color: #fff;
+}
+
+.header-Home button:hover {
+    border: 2px solid rgb(5, 155, 249);
+}
+#btnSearch{
+    border-radius: 20px;
+    width: 10%;
+    height: 30px;
+}
+
+#inputSearch{
+    width: 60%;  
+    display: flex;
+    align-items: center;
+    height: 30px;
+    display: inline;
+    border-radius: 50px;
+}
+
+#logo{
+    width: 60px;
+    height: 60px;
+    margin-left: 5%;
+    border-radius: 50%;
+}
+
+.nav-ulHome {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-ulHome li a {
+    color: black;
+    text-decoration: none;
+    margin: 0 50px 0px 0;
+}
+
+.nav-ulHome li a:hover {
+    color: rgb(36, 36, 251);
+}
+
+#icono{
+    width: 37px;
+    height: 37px;
+    margin-right: 20px;
+}
+
+#section_home{
+    display: flex;
+	flex-direction: column;
+}
+
+.cbxOptions, #date-left input{
+    border-radius: 50px;
+    width: 150px;
+    height: 25px;
+    margin: 0 0 15px;
+    border: 2px solid rgb(106, 196, 252);
+}
+
+.cbxOptions option, #date-left input{
+    text-align: center;
+}
+
+#date-left {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap; 
+    justify-content: space-around;
+	align-items: center;
+}
+
+#date-left span {
+    margin-bottom: 5px;
+    font-family: "Font-Custom3";
+    font-size:medium;
+}
+
+#date-left h2 {
+    padding-bottom: 15px;
+    margin-top: 2px;
+}
+.card {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border: 1px solid lightgray;
+    box-shadow: 5px -3px 10px 5px rgb(204, 229, 246);
+    border-radius:15px;
+    margin-bottom: 25px;
+}
+
+.cards-Box-home-right .card img{
+    width: 350px;
+    height: 370px;
+}
+
+.cards-Box-home-right .card h3{
+    text-align: center;
+    font-family: "Font-Custom3";
+    font-size: large;
+}
+
+.cards-Box-home-right .card .card-footer{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+	align-content: stretch;
+    height: 100px;
+}
+
+footer img{
+    margin-bottom: 20px;
+}
+/* #### FIN HOME #### */
+/*---------------------------------------------*/
+/* #### CREATE ACCOUNT PAGE #### */
+.nav-ucreateAccount {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-ucreateAccount li a {
+    color: black;
+    text-decoration: none;
+    margin: 0 0px 0 30px;
+}
+
+.nav-ucreateAccount li a:hover {
+    color: rgb(36, 36, 251);
+}
+.main-createAccount{
+    margin-top: 60px;
+}
+
+#sectionCreateAccount{
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.createAccount-Box{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+}
+
+.createAccount-Box input {
+    display: block !important; 
+    margin: 0 0 10px 0;
+    border: 2px solid rgb(106, 196, 252);
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+}
+
+.createAccount-Box span {
+    display: block !important; 
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+}
+
+#footer-createAccount{
+    margin: 0px 0 10px 0;
+}
+/* #### FIN PAGINA CREATE ACCOUNT #### */
+/*---------------------------------------------*/
+/* #### PAGINA HISTORIAL COMPRAS #### */
+#header-history{
+    padding-bottom: 0.1px;
+}
+
+.main-history #section-history, .main-Home #section_home {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: space-around; /*porqué no crea el espacio entre los dos divs?*/
+}
+
+.cards-Box-history-left, .cards-Box-home-left {
+    margin: 0 20px 20px 20px;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: flex-start;
+}
+
+.cards-Box-home-left img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.nav-history img {
+    margin: 0 5px 0 2PX;
+    width: 30px;
+    height: 30px;
+}
+
+#section-history .cards-Box-history-left .card h3,  
+#section-history .cards-Box-history-right .card h3, 
+#section_home .cards-Box-home-left .card h3,  
+#section_home .cards-Box-home-right .card h3 {
+    text-align: center;
+}
+
+#section-history .cards-Box-history-left .card img,  
+#section-history .cards-Box-history-right .card img,
+#section_home .cards-Box-home-left .card img, 
+#section_home .cards-Box-home-right .card img {
+    width: 350px;
+    height: 370px;
+}
+
+.cards-Box-history-right, .cards-Box-home-right {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: flex-start;
+}
+
+.cards-Box-history-right .card, .cards-Box-home-right .card{
+    margin: 0 20px 20px 20px;
+}
+  
+#section-history .cards-Box-history-right .card .card-footer{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: flex-start;
+    margin: 0 0 10px 0;
+}
+
+#section-history .cards-Box-history-right .card .card-footer span {
+    font-family: "Font-Custom3";
+    margin: 0 0 4px 10px;
+    font-size: small;
+}
+
+#section-history .cards-Box-history-right .card .card-footer .card-footer-contact {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: flex-start;
+} 
+
+#section-history .cards-Box-history-right .card .card-footer .card-footer-contact img{
+    width: 25px;
+    height: 25px;
+    margin: 0 0 0 10px ;
+}
+/* #### FIN PAGINA HISTORIAL COMPRAS #### */
+/*---------------------------------------------*/
+/* #### PAGINA AYUDA #### */
+.box-logo-header-help, .box-header-history {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.box-logo-header-help img,  .box-header-history img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.nav-logo-header-help{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-end;
+	align-content: stretch;
+}
+
+.nav-ulHelp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-ulHelp #logoHome {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-ulHelp li a {
+    color: black;
+    text-decoration: none;
+    margin: 0 0px 0 30px;
+}
+
+.nav-ulHelp li a:hover {
+    color: rgb(36, 36, 251);
+}
+
+.main-Help{
+    margin-top: 60px;
+}
+
+#section-Help {
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.card-help-box {
+    width: 450px;
+    padding: 15px 15px 15px 15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border: 1px solid lightgray;
+    box-shadow: 5px -3px 10px 5px rgb(193, 224, 246);
+    border-radius:15px;
+    margin-bottom: 25px;
+}
+
+#section-Help ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start
+}
+.nav-compras-help li a{
+    color: black;
+    text-decoration: none;
+    margin: 0 50px 0px 0;
+    font-size: medium;
+}
+
+#footer-help{
+    margin: 0px 0 10px 0;
+}
+/* #### FIN PAGINA AYUDA #### */
+/*---------------------------------------------*/

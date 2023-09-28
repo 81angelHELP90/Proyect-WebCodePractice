@@ -12,14 +12,14 @@
 <body class="container">
     <header class="header-createAccount  position-general">
         <div>
-            <img id="logo" src="../assets/img/Header/LogoMarca.png" alt="Sale-Power-Tools-logo">
+            <img id="logo" src="../assets/img/Header/LogoMarca.png" alt="Sale Power Tools">
         </div>
     </header>
     <main class="main-createAccount">
         <section id="sectionCreateAccount">
             <div class="createAccount-Box">
                 <h1>Crear Cuanta</h1>
-                <form id="form_0" action="">
+                <form id="form_createAccount" action="">
                     <input class="inputForm" type="text" placeholder="Nombre">
                     <input class="inputForm" type="text" placeholder="Apellido">
                     <input class="inputForm" type="number" placeholder="DNI">
@@ -27,11 +27,11 @@
                     <input class="inputForm" type="tel" placeholder="Teléfono">
                     <input class="inputForm" type="email" placeholder="Correo Eléctronico">
                     <input class="inputForm" type="text" placeholder="Direccion">
-                    <span>Ingrese una contraseña</span>
+                    <span>Ingrese una contraseña</span> <!-- class="hidden-element-footer" Porque acá no escucha el breakpoint y en el footer sí? -->
                     <input class="inputForm" type="password" placeholder="Password">
                     <span>Confirme contraseña</span>
                     <input class="inputForm" type="password" placeholder="Password">
-                    <!-- go page login-->
+                    <!-- go page login -->
                     <button class="btn-custom" id="btnCreateAccount"><a href="../index.html">Crear</a></button>
                 </form>
             </div>
@@ -39,7 +39,7 @@
     </main>
     <footer id="footer-createAccount">
         <div class="footer-box position-general">
-            <span>Nuestras redes sociales:</span>
+            <span class="hidden-element-footer">Nuestras redes sociales:</span>
             <a href="https://www.instagram.com/"><img id="iconoInstagram" src="../assets/img/Footer/Instagram.png" alt="Instagram image"></a>
             <a href="https://ar.linkedin.com/"><img id="iconoLinkeding" src="../assets/img/Footer/Linkeding.png" alt="Linkeding image"></a>
             <a href="https://twitter.com/iniciarsesion?lang=es"><img id="iconoTwitter" src="../assets/img/Footer/twitter.png" alt="Twitter image"></a>

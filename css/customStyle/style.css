@@ -13,6 +13,7 @@
 
 body{
     margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, span, button, a{
@@ -22,6 +23,20 @@ h1, h2, h3, span, button, a{
 
 select, select option{
     font-family: "Font-Custom3";
+}
+
+.card-Title {
+    margin-top: 15px;
+}
+
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    width: 465px;
+    height: 406px;
+}
+
+.img-carousel{
+    width: 320px;
+    height: 238px;
 }
 
 input{
@@ -56,6 +71,10 @@ input{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.hidden-element{
+    display: none;
 }
 
 .footer-box span{
@@ -106,7 +125,7 @@ input{
 /* #### FIN PAGE login ###*/
 /*---------------------------------------------*/
 /* #### PAGE HOME #### */
-header{
+header, .bg-custom{
     background-color: rgb(106, 196, 252);
 }
 
@@ -124,12 +143,11 @@ header{
 }
 #btnSearch{
     border-radius: 20px;
-    width: 10%;
     height: 30px;
 }
 
 #inputSearch{
-    width: 60%;  
+    width: 100%;   
     display: flex;
     align-items: center;
     height: 30px;
@@ -140,7 +158,6 @@ header{
 #logo{
     width: 60px;
     height: 60px;
-    margin-left: 5%;
     border-radius: 50%;
 }
 
@@ -204,6 +221,7 @@ header{
     padding-bottom: 15px;
     margin-top: 2px;
 }
+
 .card {
     display:flex;
     flex-direction:column;
@@ -212,11 +230,6 @@ header{
     box-shadow: 5px -3px 10px 5px rgb(204, 229, 246);
     border-radius:15px;
     margin-bottom: 25px;
-}
-
-.cards-Box-home-right .card img{
-    width: 350px;
-    height: 370px;
 }
 
 .cards-Box-home-right .card h3{
@@ -232,6 +245,7 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+
 footer {
     display: flex;
 	flex-direction: row;
@@ -278,6 +292,7 @@ footer img{
     text-align: center;
     align-items: center;
 }
+
 .createAccount-Box{
     display: flex;
 	flex-direction: column;
@@ -315,9 +330,9 @@ footer img{
 }
 
 .main-history #section-history, .main-Home #section_home {
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     align-items: flex-start;
     align-content: space-around; /*porqué no crea el espacio entre los dos divs?*/
 }
@@ -355,8 +370,8 @@ footer img{
 #section-history .cards-Box-history-right .card img,
 #section_home .cards-Box-home-left .card img, 
 #section_home .cards-Box-home-right .card img {
-    width: 350px;
-    height: 370px;
+    width: 220px;
+    height: 240px;
 }
 
 .cards-Box-history-right, .cards-Box-home-right {
@@ -495,6 +510,134 @@ footer img{
 
 #footer-help{
     margin: 0px 0 10px 0;
+    display: block;
 }
 /* #### FIN PAGINA AYUDA #### */
+
+/*MEDIA QUERIES*/
+@media(max-width:768px){
+    .hidden-element-footer, .hidden-element-header {
+        display: none;
+    }
+
+    .show-element-header {
+        display: block;
+    }
+
+    .carousel-item{
+        border: 0px solid rgb(106, 196, 252);
+        border-radius: 10px;
+    }
+
+    #inputSearch{
+        width: 40%;   
+    }
+
+    .main-createAccount{
+        margin-top: 15px;
+    }
+
+    .main-history #section-history {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column; 
+    }
+}
+
+@media(max-width:576px){
+    .hidden-element-footer, .hidden-element-header, #txtFiltro, #cbxPotencia {
+        display: none;
+    }
+
+    .show-element-header {
+        display: block;
+        width: 100%;
+    }
+    
+    .carousel-item.active {
+        border: 1px solid rgb(106, 196, 252);
+        border-radius: 10px;
+        width: 350px;
+    }
+
+    #inputSearch{
+        width: 40%;   
+    }
+
+    .main-createAccount{
+        margin-top: 15px;
+    }
+
+    .main-history #section-history {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .ms-width {
+        width: 350px;
+        align-items: center;
+    }
+
+    .card {
+        margin-left: 10px;
+        margin-right: 10px
+    }
+
+    .card h3, .card span{
+        margin-left: 10px;
+        margin-right: 10px
+    }
+
+    .card .card-footer{
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #section-history .cards-Box-history-right .card .card-footer .card-footer-contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+    
+    } 
+    
+    .card-footer-contact > img{
+        width: 30px;
+        height: 30px;
+        align-items: center;
+    }
+
+    .card-footer-contact{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #date-left {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .card-help-box {
+        width: 310px;
+        padding: 5px 5px 5px 5px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        border: 1px solid lightgray;
+        box-shadow: 5px -3px 10px 5px rgb(193, 224, 246);
+        border-radius:15px;
+        margin-bottom: 15px;
+    }
+
+    .main-Help{
+        margin-top: 10px;
+    }
+}
 /*---------------------------------------------*/

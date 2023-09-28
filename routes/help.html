@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0"> 
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="../assets/img/Header/LogoMarca.png" />
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/customStyle/style.css">
+    <title>Sale-Power-Tools</title>
 </head>
+
 <body class="container">
     <header class="header-help">
         <div class="box-logo-header-help">
-            <img src="../img/Header/LogoMarca.png" alt="logo">
+            <img src="../assets/img/Header/LogoMarca.png" alt="Sale-Power-Tools-logo">
         </div>
         <nav class="nav-logo-header-help">
-            <ul class="nav-ulHelp"> 
-                <a href="./home.html"><img id="logoHome" src="../img/Header/Home.png" alt="logo"></a>
+            <ul class="nav-ulHelp">
+                <a href="./home.html"><img id="logoHome" src="../assets/img/Header/Home.png"
+                        alt="Sale Power Tools Home"></a>
                 <li><a href="./historialCompras.html">Mis Compras</a></li>
             </ul>
         </nav>
     </header>
     <main class="main-Help">
-        <section id="section-Help">
+        <!-- PORQUE NO SE OCULTA-->
+        <section id="section-Help" class="hidden-element-header">
+            <h1>Cómo podemos ayudarte?</h1>
+            <div class="card-help-box">
+                <span>Ayuda con las compras realizadas</span>
+                <ul class="nav-compras-help">
+                    <li><a href="#">Realizar una devolución</a></li>
+                    <li><a href="#">No me llego la compra</a></li>
+                    <li><a href="#">El producto no esta completo</a></li>
+                    <li><a href="#">La entrega esta demorada</a></li>
+                    <li><a href="#">Calificar un producto</a></li>
+                </ul>
+            </div>
+            <div class="card-help-box">
+                <span>Ayuda con los vendedores</span>
+                <ul class="nav-compras-help">
+                    <li><a href="#">Contactar a vendedor</a></li>
+                    <li><a href="#">Calificar al vendedor</a></li>
+                </ul>
+            </div>
+            <div class="card-help-box">
+                <span>Ayuda con tu cuenta</span>
+                <ul class="nav-compras-help">
+                    <li><a href="#">Cancelar cuenta</a></li>
+                    <li><a href="#">Cambiar contraseña</a></li>
+                    <li><a href="#">Actualizar datos de contacto</a></li>
+                    <li><a href="#">Agregar nueva dirección de envío</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Breakpoint-->
+        <section id="section-Help" class="hidden-element show-element-header">
             <h1>Cómo podemos ayudarte?</h1>
             <div class="card-help-box">
                 <span>Ayuda con las compras realizadas</span>
@@ -52,12 +88,18 @@
     </main>
     <footer id="footer-help">
         <div class="footer-box position-general">
-            <span>Nuestras redes sociales:</span>
-            <img id="iconoInstagram" src="../img/Footer/Instagram.png" alt="logo1">
-            <img id="iconoLinkeding" src="../img/Footer/Linkeding.png" alt="logo2">
-            <img id="iconoTwitter" src="../img/Footer/twitter.png" alt="logo3">
-            <img id="iconoWhatsApp" src="../img/Footer/WhatsApp.png" alt="logo4">
+            <span class="hidden-element-footer">Nuestras redes sociales:</span>
+            <a href="https://www.instagram.com/"><img id="iconoInstagram" src="../assets/img/Footer/Instagram.png"
+                    alt="Instagram image"></a>
+            <a href="https://ar.linkedin.com/"><img id="iconoLinkeding" src="../assets/img/Footer/Linkeding.png"
+                    alt="Linkeding image"></a>
+            <a href="https://twitter.com/iniciarsesion?lang=es"><img id="iconoTwitter"
+                    src="../assets/img/Footer/twitter.png" alt="Twitter image"></a>
+            <a href="https://www.whatsapp.com/?lang=es_LA"><img id="iconoWhatsApp"
+                    src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp image"></a>
         </div>
     </footer>
+    <script src="./js/bootstrap.js"></script>
 </body>
+
 </html>

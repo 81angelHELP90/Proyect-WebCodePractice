@@ -3,165 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="../assets/img/Header/LogoMarca.png"/>
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/customStyle/style.css">
+    <title>Sale-Power-Tools</title>
 </head>
 <body class="container">
     <header id="header-history">
         <div class="box-header-history">
-            <img src="../img/Header/LogoMarca.png" alt="logo">
+            <img src="../assets/img/Header/LogoMarca.png" alt="Sale-Power-Tools-logo">
         </div>
         <nav class="nav-logo-header-history">
             <ul class="nav-history"> 
-                <a href="./home.html"><img id="logoHome" src="../img/Header/Home.png" alt="logo"></a>
-                <a href="./help.html"><img src="../img/Header/Help.png" alt="logo"></a>
-                <a href="../index.html"><img src="../img/Header/Salir.png" alt="logo"></a>
+                <a href="./home.html"><img id="logoHome" src="../assets/img/Header/Home.png" alt="Sale Power Tools Home"></a>
+                <a href="./help.html"><img src="../assets/img/Header/Help.png" alt="Sale Power Tools Help"></a>
+                <a href="../index.html"><img src="../assets/img/Header/Salir.png" alt="Sale Power Tools Salir"></a>
             </ul>
         </nav>
     </header>
-    <main class="main-history">
-        <section id="section-history">
-            <div class="cards-Box-history-left">
-                <div id="date-left">
-                    <h2>FILTROS</h2>
-                    <span>Fecha de compra</span>
-                    <input type="Date" placeholder="Fecha de Nac">
-                </div>
-                <select class="cbxOptions" name="selectPrecio">
-                    <option value="value0" selected>Precio $</option>
-                    <option value="value1">1.000...10.000</option>
-                    <option value="value2">10.000...50.000</option>
-                    <option value="value3">50.000...110.000</option>
-                </select>
-                <select class="cbxOptions" name="selectColor">
-                    <option value="value0" selected>Potencia</option>
-                    <option value="value1">500 Watts</option>
-                    <option value="value2">850 Watts</option>
-                    <option value="value3">1200 Watts</option>
-                </select>
-                <button class="btn-custom" id="btnCreateAccount">Filtrar</button>
-            </div>
-            <div class="cards-Box-history-right">
-                <div class="card">
-                    <div class="card-Title">
-                        <h3>Amoladora de mano Black & Decker</h3>
+    <div class="container text-center">
+        <div class="row">
+            <main class="main-history">   
+                <section id="section-history"> 
+                    <div class="hidden-element-header col-lg-2 col-md-2 cards-Box-history-left">
+                        <div id="date-left">
+                            <h2>FILTROS</h2>
+                            <span>Fecha de compra</span>
+                            <input type="Date" placeholder="Fecha de Nac">
+                        </div>
+                        <select class="cbxOptions" name="selectPrecio">
+                            <option value="value0" selected>Precio $</option>
+                            <option value="value1">1.000...10.000</option>
+                            <option value="value2">10.000...50.000</option>
+                            <option value="value3">50.000...110.000</option>
+                        </select>
+                        <select class="cbxOptions" name="selectColor">
+                            <option value="value0" selected>Potencia</option>
+                            <option value="value1">500 Watts</option>
+                            <option value="value2">850 Watts</option>
+                            <option value="value3">1200 Watts</option>
+                        </select>
+                        <button class="btn-custom" id="btnCreateAccount">Filtrar</button>
                     </div>
-                    <div class="card-body">
-                        <img src="../img/Products/AmoladoraDeMano.webp" alt="logo4">
-                    </div>
-                    <div class="card-footer">
-                        <span>Fecha de compra: 20 de Enero 2018</span>
-                        <span>Forma de pago: VISA ..6745</span>
-                        <span>Forma de envio: a domicio</span>
-                        <div class="card-footer-contact">
-                            <span>Contactar al vendedor:</span> 
-                            <img src="../img/Footer/WhatsApp.png" alt="logo4">
-                            <img src="../img/Footer/gmail.png" alt="logo4">
+                    <div class="hidden-element-header col-lg-10 col-md-10 cards-Box-history-right">
+                        <div class="card col-lg-5 col-md-5 col-ms-12">
+                            <div class="card-Title">
+                                <h3>Amoladora Black & Decker</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/AmoladoraDeMano.webp" alt="Amoladora DeMano">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 20 de Enero 2018</span>
+                                <span>Forma de pago: VISA ..6745</span>
+                                <span>Forma de envio: a domicio</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-lg-5 col-md-5 col-ms-12">
+                            <div class="card-Title">
+                                <h3>Grabadora laser</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/GrabadoraLaser.webp" alt="Grabadora Laser">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 20 de Mayo 2019</span>
+                                <span>Forma de pago: VISA ..6745</span>
+                                <span>Forma de envio: a domicio</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-lg-5 col-md-5 col-ms-12">
+                            <div class="card-Title">
+                                <h3>Máquina corta botellas</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/MaquinaCortaBotellas.webp" alt="MaquinaCorta Botellas">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 26 de Enero 2020</span>
+                                <span>Forma de pago: VISA ..3067</span>
+                                <span>Forma de envio: a domicio</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-lg-5 col-md-5 col-ms-12">
+                            <div class="card-Title">
+                                <h3>Equipo para pintar Gama</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/EquipoPintar.webp" alt="Equipo Pintar">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 2 de Julio 2020</span>
+                                <span>Forma de pago: VISA ..6745</span>
+                                <span>Forma de envio: a domicio</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-lg-5 col-md-5 col-ms-12">
+                            <div class="card-Title">
+                                <h3>Amoladora de banco</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/AmoladoraBanco.webp" alt="Amoladora Banco">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 15 de Diciembre 2021</span>
+                                <span>Forma de pago: VISA ..3067</span>
+                                <span>Forma de envio: a domicio</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="card col-lg-5 col-md-5 col-ms-12">
+                            <div class="card-Title">
+                                <h3>Taladro Bateria</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/TaladroBateria.webp" alt="Taladro Bateria">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 5 de Agosto 2023</span>
+                                <span>Forma de pago: VISA ..6745</span>
+                                <span>Forma de envio: Retiro en sucursal</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-Title">
-                        <h3>Grabadora laser</h3>
-                    </div>
-                    <div class="card-body">
-                        <img src="../img/Products/GrabadoraLaser.webp" alt="img1">
-                    </div>
-                    <div class="card-footer">
-                        <span>Fecha de compra: 20 de Mayo 2019</span>
-                        <span>Forma de pago: VISA ..6745</span>
-                        <span>Forma de envio: a domicio</span>
-                        <div class="card-footer-contact">
-                            <span>Contactar al vendedor:</span> 
-                            <img src="../img/Footer/WhatsApp.png" alt="logo4">
-                            <img src="../img/Footer/gmail.png" alt="logo4">
+                    <!-- Breakpoint -->
+                    <div class="hidden-element show-element-header">
+                        <div id="date-left">
+                            <input type="Date" placeholder="Fecha de Nac">
+                            <select class="cbxOptions" name="selectPrecio">
+                                <option value="value0" selected>Precio $</option>
+                                <option value="value1">1.000...10.000</option>
+                                <option value="value2">10.000...50.000</option>
+                                <option value="value3">50.000...110.000</option>
+                            </select>
+                            <button class="btn-custom" id="btnCreateAccount">Filtrar</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-Title">
-                        <h3>Máquina corta botellas</h3>
-                    </div>
-                    <div class="card-body">
-                        <img src="../img/Products/MaquinaCortaBotellas.webp" alt="img1">
-                    </div>
-                    <div class="card-footer">
-                        <span>Fecha de compra: 26 de Enero 2020</span>
-                        <span>Forma de pago: VISA ..3067</span>
-                        <span>Forma de envio: a domicio</span>
-                        <div class="card-footer-contact">
-                            <span>Contactar al vendedor:</span> 
-                            <img src="../img/Footer/WhatsApp.png" alt="logo4">
-                            <img src="../img/Footer/gmail.png" alt="logo4">
+                    <div class="hidden-element show-element-header">
+                        <div class="card">
+                            <div class="card-Title">
+                                <h3>Amoladora Black & Decker</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/AmoladoraDeMano.webp" alt="Amoladora DeMano">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 20-01-2018</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-Title">
-                        <h3>Equipo para pintar Gama</h3>
-                    </div>
-                    <div class="card-body">
-                        <img src="../img/Products/EquipoPintar.webp" alt="logo4">
-                    </div>
-                    <div class="card-footer">
-                        <span>Fecha de compra: 2 de Julio 2020</span>
-                        <span>Forma de pago: VISA ..6745</span>
-                        <span>Forma de envio: a domicio</span>
-                        <div class="card-footer-contact">
-                            <span>Contactar al vendedor:</span> 
-                            <img src="../img/Footer/WhatsApp.png" alt="logo4">
-                            <img src="../img/Footer/gmail.png" alt="logo4">
+                        <div class="card mx-2">
+                            <div class="card-Title">
+                                <h3>Grabadora laser</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/GrabadoraLaser.webp" alt="Grabadora Laser">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 20-05-2019</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-Title">
-                        <h3>Amoladora de banco</h3>
-                    </div>
-                    <div class="card-body">
-                        <img src="../img/Products/AmoladoraBanco.webp" alt="logo4">
-                    </div>
-                    <div class="card-footer">
-                        <span>Fecha de compra: 15 de Diciembre 2021</span>
-                        <span>Forma de pago: VISA ..3067</span>
-                        <span>Forma de envio: a domicio</span>
-                        <div class="card-footer-contact">
-                            <span>Contactar al vendedor:</span> 
-                            <img src="../img/Footer/WhatsApp.png" alt="logo4">
-                            <img src="../img/Footer/gmail.png" alt="logo4">
+                        <div class="card mx-2">
+                            <div class="card-Title">
+                                <h3>Máquina corta botellas</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/MaquinaCortaBotellas.webp" alt="MaquinaCorta Botellas">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 26-01-2020</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-Title">
-                        <h3>Taladro atornillador Bateria</h3>
-                    </div>
-                    <div class="card-body">
-                        <img src="../img/Products/TaladroBateria.webp" alt="logo4">
-                    </div>
-                    <div class="card-footer">
-                        <span>Fecha de compra: 5 de Agosto 2023</span>
-                        <span>Forma de pago: VISA ..6745</span>
-                        <span>Forma de envio: Retiro en sucursal</span>
-                        <div class="card-footer-contact">
-                            <span>Contactar al vendedor:</span> 
-                            <img src="../img/Footer/WhatsApp.png" alt="logo4">
-                            <img src="../img/Footer/gmail.png" alt="logo4">
+                        <div class="card mx-2">
+                            <div class="card-Title">
+                                <h3>Equipo para pintar Gama</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/EquipoPintar.webp" alt="Equipo Pintar">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 2-06-2020</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
                         </div>
+                        <div class="card mx-2">
+                            <div class="card-Title">
+                                <h3>Amoladora de banco</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/AmoladoraBanco.webp" alt="Amoladora Banco">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 15-12-2021</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="card mx-2">
+                            <div class="card-Title">
+                                <h3>Taladro Bateria</h3>
+                            </div>
+                            <div class="card-body">
+                                <img src="../assets/img/Products/TaladroBateria.webp" alt="Taladro Bateria">
+                            </div>
+                            <div class="card-footer">
+                                <span>Fecha de compra: 5-08-2023</span>
+                                <div class="card-footer-contact">
+                                    <span>Contactar al vendedor:</span> 
+                                    <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                    <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARRUSEL
+                        <div id="carouselExampleDark" class="carousel slide col-md-12 col-sm-12" data-bs-ride="carousel">
+                            <div class="carousel-inner">  
+                                <div class="carousel-item active">
+                                    <div class="card-Title">
+                                        <h3>Amoladora Black & Decker</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <img class="img-carousel" src="../assets/img/Products/AmoladoraDeMano.webp" alt="Amoladora DeMano">
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Fecha de compra: 20 de Enero 2018</span>
+                                        <span>Forma de pago: VISA ..6745</span>
+                                        <span>Forma de envio: a domicio</span>
+                                        <div class="card-footer-contact">
+                                            <span>Contactar al vendedor:</span> 
+                                            <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                            <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-Title">
+                                        <h3>Grabadora laser</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <img class="img-carousel" src="../assets/img/Products/GrabadoraLaser.webp" alt="Grabadora Laser">
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Fecha de compra: 20 de Mayo 2019</span>
+                                        <span>Forma de pago: VISA ..6745</span>
+                                        <span>Forma de envio: a domicio</span>
+                                        <div class="card-footer-contact">
+                                            <span>Contactar al vendedor:</span> 
+                                            <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                            <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-Title">
+                                        <h3>Máquina corta botellas</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <img class="img-carousel" src="../assets/img/Products/MaquinaCortaBotellas.webp" alt="MaquinaCorta Botellas">
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Fecha de compra: 26 de Enero 2020</span>
+                                        <span>Forma de pago: VISA ..3067</span>
+                                        <span>Forma de envio: a domicio</span>
+                                        <div class="card-footer-contact">
+                                            <span>Contactar al vendedor:</span> 
+                                            <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                            <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-Title">
+                                        <h3>Equipo para pintar Gama</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <img class="img-carousel" src="../assets/img/Products/EquipoPintar.webp" alt="Equipo Pintar">
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Fecha de compra: 2 de Julio 2020</span>
+                                        <span>Forma de pago: VISA ..6745</span>
+                                        <span>Forma de envio: a domicio</span>
+                                        <div class="card-footer-contact">
+                                            <span>Contactar al vendedor:</span> 
+                                            <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                            <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-Title">
+                                        <h3>Amoladora de banco</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <img class="img-carousel" src="../assets/img/Products/AmoladoraBanco.webp" alt="Amoladora Banco">
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Fecha de compra: 15 de Diciembre 2021</span>
+                                        <span>Forma de pago: VISA ..3067</span>
+                                        <span>Forma de envio: a domicio</span>
+                                        <div class="card-footer-contact">
+                                            <span>Contactar al vendedor:</span> 
+                                            <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                            <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-Title">
+                                        <h3>Taladro Bateria</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <img class="img-carousel" src="../assets/img/Products/TaladroBateria.webp" alt="Taladro Bateria">
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>Fecha de compra: 5 de Agosto 2023</span>
+                                        <span>Forma de pago: VISA ..6745</span>
+                                        <span>Forma de envio: Retiro en sucursal</span>
+                                        <div class="card-footer-contact">
+                                            <span>Contactar al vendedor:</span> 
+                                            <img src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp">
+                                            <img src="../assets/img/Footer/gmail.png" alt="gmail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        -->
                     </div>
+                </section>
+            </main>
+            <footer>
+                <div class="footer-box position-general">
+                    <span class="hidden-element-footer">Nuestras redes sociales:</span>
+                    <a href="https://www.instagram.com/"><img id="iconoInstagram" src="../assets/img/Footer/Instagram.png" alt="Instagram image"></a>
+                    <a href="https://ar.linkedin.com/"><img id="iconoLinkeding" src="../assets/img/Footer/Linkeding.png" alt="Linkeding image"></a>
+                    <a href="https://twitter.com/iniciarsesion?lang=es"><img id="iconoTwitter" src="../assets/img/Footer/twitter.png" alt="Twitter image"></a>
+                    <a href="https://www.whatsapp.com/?lang=es_LA"><img id="iconoWhatsApp" src="../assets/img/Footer/WhatsApp.png" alt="WhatsApp image"></a>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-box position-general">
-            <span>Nuestras redes sociales:</span>
-            <img id="iconoInstagram" src="../img/Footer/Instagram.png" alt="logo1">
-            <img id="iconoLinkeding" src="../img/Footer/Linkeding.png" alt="logo2">
-            <img id="iconoTwitter" src="../img/Footer/twitter.png" alt="logo3">
-            <img id="iconoWhatsApp" src="../img/Footer/WhatsApp.png" alt="logo4">
+            </footer>
         </div>
-    </footer>
+    </div>
+    <script src="./js/bootstrap.js"></script>
 </body>
 </html>

@@ -29,11 +29,6 @@ select, select option{
     margin-top: 15px;
 }
 
-.carousel-item.active, .carousel-item-next, .carousel-item-prev {
-    width: 465px;
-    height: 406px;
-}
-
 .img-carousel{
     width: 320px;
     height: 238px;
@@ -557,7 +552,6 @@ footer img{
     .carousel-item.active {
         border: 1px solid rgb(106, 196, 252);
         border-radius: 10px;
-        width: 350px;
     }
 
     #inputSearch{
@@ -640,4 +634,6 @@ footer img{
         margin-top: 10px;
     }
 }
-/*---------------------------------------------*/
+/*---------------------HASTA ACA SIN SASS------------------------*/
+/*---------------------AHORA CON SASS------------------------*/
+@import "./node_modules/bootstrap/scss/bootstrap.scss"

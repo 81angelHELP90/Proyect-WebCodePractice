@@ -539,6 +539,9 @@ footer img {
     display: flex;
     flex-direction: column;
   }
+  .card-body img {
+    width: 85%;
+  }
 }
 @media (max-width: 576px) {
   .hidden-element-footer, .hidden-element-header, #txtFiltro, #cbxPotencia {
@@ -588,8 +591,8 @@ footer img {
     align-items: start;
   }
   .card-footer-contact > img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     align-items: center;
   }
   .card-footer-contact {
@@ -617,6 +620,9 @@ footer img {
   }
   .main-Help {
     margin-top: 10px;
+  }
+  .card-body img {
+    width: 85%;
   }
 }
 /*---------------------HASTA ACA SIN SASS------------------------*/

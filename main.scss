@@ -1,64 +1,9 @@
-/* ##### ESTILOS GLOBALES #### */
-@font-face{
-    font-family: "Font-Custom2";
-    src: url("../../assets/font/Tulpen_One/TulpenOne-Regular.ttf");
-}
-
-@font-face{
-    font-family: "Font-Custom3";
-    src: url("../../assets/font/Roboto/Roboto-Medium.ttf");
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap");
-
-body{
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, span, button, a{
-    font-family: "Font-Custom3";
-    font-size: large;
-}
-
-select, select option{
-    font-family: "Font-Custom3";
-}
-
-.card-Title {
-    margin-top: 15px;
-}
-
-.img-carousel{
-    width: 320px;
-    height: 238px;
-}
-
-input{
-    padding-left: 10px;
-}
-
-.btn-custom {
-    background-color: rgb(106, 196, 252);
-    margin-bottom: 10px;
-    border-radius: 30px;
-    width: 120px;
-    height: 30px;
-    color: black;
-    text-decoration: none;
-}
-
-.btn-custom:hover {
-    background-color: #fff;
-    border: 2px solid rgb(106, 196, 252);
-}
-
-.btn-custom a{
-    color: black;
-    text-decoration: none;
-}
-
-/* posicion global*/
+/* @import "./node_modules/bootstrap/scss/bootstrap.scss"; */
+/* Constants */
+$backgroundColor: rgb(106, 196, 252);
+$blackColor: #000000;
+$whiteColor: #fff;
+/* Globales */
 .position-general {
     display: flex;
     flex-direction: row;
@@ -66,28 +11,74 @@ input{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-}
 
-.hidden-element{
-    display: none;
+    #logo{
+        width: 65px;
+        height: 65px;
+        margin: 20px 0px 0px 0px;
+    }
 }
+.btn-custom {
+    background-color: $backgroundColor;
+    margin: 10px 0px 10px 0px;
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    text-decoration: none;
 
-.footer-box span{
-    margin-right: 10px;
-    padding-bottom: 20px;
+    :hover {
+        background-color: $whiteColor;
+        border: 2px solid $backgroundColor;
+    }
+    
+    a {
+        color: $blackColor;
+        text-decoration: none;
+    }
 }
+.headerColor {
+    background-color: $backgroundColor;
 
-/* #### PAGE login ###*/
-.header-login, .header-createAccount, .header-help {
-    height: 150px;
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
 }
+.inputSearch{
+    display: flex;
+    border-radius: 25px;
+    width: calc(80% - 50px);
+    height: 30px;
+    background-color: $whiteColor;
+    justify-content: flex-end;
+    align-items: center;
 
-.header-login #logo, 
-.header-createAccount #logo{
-    width: 90px;
-    height: 90px;
+    img{
+        width: 20px;
+        height: 20px;
+        margin: 0px 7px 3px 0px;
+    }
+
+    input{
+        width: 100%;
+        height: 30px;
+        background-color: $whiteColor;
+        border-radius: 30px;    
+        
+    }
+
+    input:focus{
+        border: 0px solid green;
+        outline: none;    
+    }
 }
-
+.headerGlobal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $backgroundColor;
+}
+/* Main */
 #section-login {
     padding-top: 150px;
     display: flex;
@@ -95,553 +86,435 @@ input{
     justify-content: center;
     align-items: center;
 }
+.login-Box {
 
-.login-Box input {
-    display: block !important; 
-    margin: 0 0 10px 0;
-    border: 2px solid rgb(106, 196, 252);
-    border-radius: 10px;
-    width: 300px;
-    height: 30px;
+    input {
+        display: block !important;
+        margin: 0 0 10px 0;
+        border: 2px solid $backgroundColor;
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+    }
+
+    span {
+        display: block !important;
+        margin: 0 0 10px 0;
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+    }
 }
-
-.login-Box span {
-    display: block !important; 
-    margin: 0 0 10px 0;
-    border-radius: 10px;
-    width: 300px;
-    height: 30px;
-}
-
 .box-btn-login {
     margin-bottom: 100px;
 }
-
-/* #### FIN PAGE login ###*/
-/*---------------------------------------------*/
-/* #### PAGE HOME #### */
-header, .bg-custom{
-    background-color: rgb(106, 196, 252);
-}
-
-.header-Home img, input, button{
-    margin-top: 20px;
-    border: 0;
-}
-
-.header-Home button {
-    background-color: #fff;
-}
-
-.header-Home button:hover {
-    border: 2px solid rgb(5, 155, 249);
-}
-#btnSearch{
-    border-radius: 20px;
-    height: 30px;
-}
-
-#inputSearch{
-    width: 100%;   
-    display: flex;
-    align-items: center;
-    height: 30px;
-    display: inline;
-    border-radius: 50px;
-}
-
-#logo{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.nav-ulHome {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-.nav-ulHome li a {
-    color: black;
-    text-decoration: none;
-    margin: 0 50px 0px 0;
-}
-
-.nav-ulHome li a:hover {
-    color: rgb(36, 36, 251);
-}
-
-#icono{
-    width: 37px;
-    height: 37px;
-    margin-right: 20px;
-}
-
-#section_home{
-    display: flex;
-	flex-direction: column;
-}
-
-.cbxOptions, #date-left input{
+.cbxOptions {
     border-radius: 50px;
     width: 150px;
-    height: 25px;
+    height: 30px;
     margin: 0 0 15px;
-    border: 2px solid rgb(106, 196, 252);
-}
-
-.cbxOptions option, #date-left input{
     text-align: center;
+    border: 2px solid $backgroundColor;
 }
+.carousel-item.active {
+    border: 1px solid $backgroundColor;
+    border-radius: 10px;
 
-#date-left {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: wrap; 
-    justify-content: space-around;
-	align-items: center;
-}
+    .card-Title {
+        margin-top: 15px;
+    }
 
-#date-left span {
-    margin-bottom: 5px;
-    font-family: "Font-Custom3";
-    font-size:medium;
+    .img-carousel{
+        width: 320px;
+        height: 238px;
+    }
 }
-
-#date-left h2 {
-    padding-bottom: 15px;
-    margin-top: 2px;
+.card-body img {
+    width: 85%;
 }
-
-.card {
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    border: 1px solid lightgray;
-    box-shadow: 5px -3px 10px 5px rgb(204, 229, 246);
-    border-radius:15px;
-    margin-bottom: 25px;
+.img-carousel{
+    width: 320px;
+    height: 238px;
 }
-
-.cards-Box-home-right .card h3{
-    text-align: center;
-    font-family: "Font-Custom3";
-    font-size: large;
-}
-
-.cards-Box-home-right .card .card-footer{
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-end;
-	align-content: stretch;
-    height: 100px;
-}
-
-footer img{
-    margin-bottom: 20px;
-}
-/* #### FIN HOME #### */
-/*---------------------------------------------*/
-/* #### CREATE ACCOUNT PAGE #### */
-.nav-ucreateAccount {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    list-style: none;
-}
-
-.nav-ucreateAccount li a {
-    color: black;
+.date-custom {
+    height: 28px;
+    border-radius: 30px;
     text-decoration: none;
-    margin: 0 0px 0 30px;
+    border: 2px solid $backgroundColor;
 }
-
-.nav-ucreateAccount li a:hover {
-    color: rgb(36, 36, 251);
-}
-.main-createAccount{
-    margin-top: 60px;
-}
-
-#sectionCreateAccount{
+#sectionCreateAccount {
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     align-items: center;
+  }
+  
+  .createAccount-Box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+  }
+  #form_createAccount{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+  }
+  
+/* Footer */
+.footer-box {
+    display: flex;
+    align-items: center;
+    margin-top: 25%;
+}
+/*HISTORIAL DE COMPRAS*/
+.headerHistory {
+    background-color: $backgroundColor;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-rows: repeat(2, (35px, 35px));
+    grid-column-gap: auto;
+
+    .headerHistoryImg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 70px;
+            height: 70px;
+            margin-top: 5px;
+        }
+    }
+
+    .headerHistoryNav {
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            width: 35px;
+            height: 35px;
+        }
+
+        ul {
+            margin-left: 7px;
+            padding: 0;
+        }
+    }
 }
 
-.createAccount-Box{
+/* help */
+.header-Help {
+    background-color: $backgroundColor;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-rows: repeat(2, (25px, 15px)); /*1fr 1fr;*/
+    grid-column-gap: auto;
+    grid-row-gap: 2px;
+
+    .header-HelpLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 60px;
+            height: 60px;
+            margin: 10px 0px 0px 0px; 
+        }
+    }
+
+    .header-HelpNav ul{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            width: 30px;
+            height: 30px;
+            margin: 0px 10px 0px 0px; 
+        }
+
+        li a, .nav-compras-help li {
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
+
+#section-Help {
     display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
-	align-content: center;
-}
-
-.createAccount-Box input {
-    display: block !important; 
-    margin: 0 0 10px 0;
-    border: 2px solid rgb(106, 196, 252);
-    border-radius: 10px;
-    width: 300px;
-    height: 30px;
-}
-
-.createAccount-Box span {
-    display: block !important; 
-    margin: 0 0 10px 0;
-    border-radius: 10px;
-    width: 300px;
-    height: 30px;
-}
-
-#footer-createAccount{
-    margin: 0px 0 10px 0;
-}
-/* #### FIN PAGINA CREATE ACCOUNT #### */
-/*---------------------------------------------*/
-/* #### PAGINA HISTORIAL COMPRAS #### */
-#header-history{
-    padding-bottom: 0.1px;
-}
-
-.main-history #section-history, .main-Home #section_home {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row; 
-    align-items: flex-start;
-    align-content: space-around; /*porqué no crea el espacio entre los dos divs?*/
-}
-
-.cards-Box-history-left, .cards-Box-home-left {
-    margin: 0 20px 20px 20px;
-    display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: flex-start;
-}
-
-.cards-Box-home-left img {
-    margin-right: 10px;
-    width: 30px;
-    height: 30px;
-}
-
-.nav-history img {
-    margin: 0 5px 0 2PX;
-    width: 30px;
-    height: 30px;
-}
-
-#section-history .cards-Box-history-left .card h3,  
-#section-history .cards-Box-history-right .card h3, 
-#section_home .cards-Box-home-left .card h3,  
-#section_home .cards-Box-home-right .card h3 {
-    text-align: center;
-}
-
-#section-history .cards-Box-history-left .card img,  
-#section-history .cards-Box-history-right .card img,
-#section_home .cards-Box-home-left .card img, 
-#section_home .cards-Box-home-right .card img {
-    width: 220px;
-    height: 240px;
-}
-
-.cards-Box-history-right, .cards-Box-home-right {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: flex-start;
-}
-
-.cards-Box-history-right .card, .cards-Box-home-right .card{
-    margin: 0 20px 20px 20px;
-}
-  
-#section-history .cards-Box-history-right .card .card-footer{
-    display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: flex-start;
-	align-content: flex-start;
-    margin: 0 0 10px 0;
-}
-
-#section-history .cards-Box-history-right .card .card-footer span {
-    font-family: "Font-Custom3";
-    margin: 0 0 4px 10px;
-    font-size: small;
-}
-
-#section-history .cards-Box-history-right .card .card-footer .card-footer-contact {
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: flex-start;
-} 
-
-#section-history .cards-Box-history-right .card .card-footer .card-footer-contact img{
-    width: 25px;
-    height: 25px;
-    margin: 0 0 0 10px ;
-}
-/* #### FIN PAGINA HISTORIAL COMPRAS #### */
-/*---------------------------------------------*/
-/* #### PAGINA AYUDA #### */
-.box-logo-header-help, .box-header-history {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-top: 15px;
-}
-
-.box-logo-header-help img,  .box-header-history img{
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-}
-
-.nav-logo-header-help{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: flex-end;
 	align-content: stretch;
-}
-
-.nav-ulHelp {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    list-style: none;
-}
-
-.nav-ulHelp #logoHome {
-    width: 25px;
-    height: 25px;
-}
-
-.nav-ulHelp li a {
-    color: black;
-    text-decoration: none;
-    margin: 0 0px 0 30px;
-}
-
-.nav-ulHelp li a:hover {
-    color: rgb(36, 36, 251);
-}
-
-.main-Help{
-    margin-top: 60px;
-}
-
-#section-Help {
-    border-radius: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-
-.card-help-box {
-    width: 450px;
-    padding: 15px 15px 15px 15px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    border: 1px solid lightgray;
-    box-shadow: 5px -3px 10px 5px rgb(193, 224, 246);
-    border-radius:15px;
-    margin-bottom: 25px;
-}
-
-#section-Help ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start
-}
-.nav-compras-help li a{
-    color: black;
-    text-decoration: none;
-    margin: 0 50px 0px 0;
-    font-size: medium;
-}
-
-#footer-help{
-    margin: 0px 0 10px 0;
-    display: block;
-}
-/* #### FIN PAGINA AYUDA #### */
-
-/*MEDIA QUERIES*/
-@media(max-width:768px){
-    .hidden-element-footer, .hidden-element-header {
-        display: none;
-    }
-
-    .show-element-header {
-        display: block;
-    }
-
-    .carousel-item{
-        border: 0px solid rgb(106, 196, 252);
-        border-radius: 10px;
-    }
-
-    #inputSearch{
-        width: 40%;   
-    }
-
-    .main-createAccount{
-        margin-top: 15px;
-    }
-
-    .main-history #section-history {
-        margin-top: 10px;
+    
+    .cardHelp {
         display: flex;
-        flex-direction: column; 
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        border: 1px solid $backgroundColor;
+        box-shadow: 5px -3px 10px 5px rgb(193, 224, 246);
+        margin-bottom: 10px;
+        height: 190px;
     }
 
-    .card-body img {
-        width: 85%;
+    li a {
+        color: black;
+        text-decoration: none;
+        list-style: none;
     }
 }
 
-@media(max-width:576px){
-    .hidden-element-footer, .hidden-element-header, #txtFiltro, #cbxPotencia {
+/* MEDIA QUERIES */
+/*pantalla mayores a 768px{*/
+@media (min-width: 768px){
+    .hidden-headerSM-Until{
         display: none;
     }
 
-    .show-element-header {
-        display: block;
+    .hidden-headerSM-Onwards{
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
-    
-    .carousel-item.active {
-        border: 1px solid rgb(106, 196, 252);
-        border-radius: 10px;
+
+    .headerSM-Onwards {
+        background-color: $backgroundColor;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-rows: repeat(2, (65px, 45px));/*1fr 1fr;*/
+        grid-column-gap: auto;
+        grid-row-gap: 10px;
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #inputSearch{
+                width: 100%;
+                border-radius: 30px;
+                margin-top: 10px;
+            }
+
+            #btnSearch{
+                border-radius: 20px;
+                height: 30px;
+                width: 80px;
+                margin: 10px 0px 0px 0px;
+                background-color: $whiteColor;
+            }
+
+            .imgHeader {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+                margin: 10px 0px 0px 0px; 
+            }
+        }
+
+        .nav-ulHome {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            list-style: none;
+
+            li a {
+                color: $blackColor;
+                text-decoration: none;
+                margin: 0 50px 0px 0;
+            }
+
+            li a:hover {
+                color: rgb(36, 36, 251);
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+            }
+        }
     }
 
-    #inputSearch{
-        width: 40%;   
+    .sectionSM-Onwards {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-column-gap: 20px;
+        grid-template-columns: 15% 85%; 
+        grid-auto-rows: auto;
+        grid-template-rows: 1fr; 
+        margin-bottom: 10px;
+
+        .filtrosSM-Onwards, .filtrosSM-OnwardsCbx, .IconSM-Onwards{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+            img {
+                width: 35px;
+                height: 35px;
+                margin-right: 5px;
+            }
+        }
+
+        .cbxOptions {
+            margin-left: 5px;
+        }
+
+        .btn-custom {
+            background-color: $backgroundColor;
+            margin: 0px 0px 12px 5px;
+            border-radius: 30px;
+            width: 120px;
+            height: 30px;
+            color: $blackColor;
+            text-decoration: none;
+        }
     }
 
-    .main-createAccount{
-        margin-top: 15px;
+    .cardsSM-Onwards{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(170px, 1fr));
+        gap: 5px;
+
+        .card{
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            border: 1px solid $backgroundColor;
+        }
+
+        .card-footer-contact {
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
     }
 
-    .main-history #section-history {
-        margin-top: 10px;
+    .cardHelp {
+        width: 60%;
+    }
+
+    .footer-box{
         display: flex;
-        flex-direction: column; 
-    }
-
-    .ms-width {
-        width: 350px;
         align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+       
+        span {
+            width: 25%;
+        }
     }
 
-    .card {
-        margin-left: 10px;
-        margin-right: 10px
+    /*HistoryCompras*/
+    .sectionFilterSM {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr; 
+        grid-auto-rows: auto;
+        grid-template-rows: 2fr;
+
+        h3 {
+            margin-top: 15px;
+        }
     }
 
-    .card h3, .card span{
-        margin-left: 10px;
-        margin-right: 10px
-    }
-
-    .card .card-footer{
-        height: 70px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    #section-history .cards-Box-history-right .card .card-footer .card-footer-contact {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: start;
-    
-    } 
-    
-    .card-footer-contact > img{
-        width: 20px;
-        height: 20px;
-        align-items: center;
-    }
-
-    .card-footer-contact{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    #date-left {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .card-help-box {
-        width: 310px;
-        padding: 5px 5px 5px 5px;
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
-        border: 1px solid lightgray;
-        box-shadow: 5px -3px 10px 5px rgb(193, 224, 246);
-        border-radius:15px;
-        margin-bottom: 15px;
-    }
-
-    .main-Help{
-        margin-top: 10px;
-    }
-
-    .card-body img {
-        width: 85%;
+    /*Crear cuenta*/
+    .sectionCreateAccount{
+        margin-top: 70px;
+        
+        input {
+            border: 2px solid $backgroundColor;
+            width: 270px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
     }
 }
-/*---------------------HASTA ACA SIN SASS------------------------*/
-/*---------------------AHORA CON SASS------------------------*/
-@import "./node_modules/bootstrap/scss/bootstrap.scss"
+
+/*pantalla menores a 767px*/
+@media (max-width: 767px){
+    .hidden-headerSM-Onwards{
+        display: none !important;
+    }
+    .hidden-element-footer {
+        display: none;
+    }
+
+    .hidden-element-section {
+        display: none;
+    }
+
+    #icono{
+        width: 37px;
+        height: 37px;
+        margin-right: 20px;
+    }
+
+    /*Historial compras*/
+    .sectionSM-Until {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input, select, button {
+            width: 120px;
+            margin: 20px 5px 20px 5px;
+        }
+    }
+
+    .carousel-inner {
+        img {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    .footer-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardHelp {
+        width: 90%;
+    }
+
+    /*Crear cuenta*/
+    .sectionCreateAccount{
+        margin-top: 50px;
+
+        input {
+            border: 2px solid $backgroundColor;
+            width: 250px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}

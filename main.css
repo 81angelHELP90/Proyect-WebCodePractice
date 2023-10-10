@@ -22,10 +22,7 @@
   width: 120px;
   height: 30px;
   text-decoration: none;
-}
-.btn-custom :hover {
-  background-color: #fff;
-  border: 2px solid rgb(106, 196, 252);
+  border: 2px solid #fff;
 }
 .btn-custom a {
   color: #000000;
@@ -59,6 +56,7 @@
   height: 30px;
   background-color: #fff;
   border-radius: 30px;
+  border: 2px solid #fff;
 }
 .inputSearch input:focus {
   border: 0px solid green;
@@ -156,11 +154,26 @@
   align-content: center;
 }
 
-#form_createAccount {
+.btnLink {
+  width: 120px;
+  height: 30px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  align-content: center;
+  background-color: rgb(106, 196, 252);
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+.btnLink a {
+  text-decoration: none;
+  list-style: none;
+  color: #000000;
+}
+
+#menuHamburguesa {
+  width: 30px;
+  height: 30px;
+  align-items: center;
 }
 
 /* Footer */
@@ -203,6 +216,16 @@
   padding: 0;
 }
 
+/*Home*/
+#iconMenu {
+  width: 35px;
+  height: 35px;
+}
+
+.ocultarMenu {
+  display: none;
+}
+
 /* help */
 .header-Help {
   background-color: rgb(106, 196, 252);
@@ -225,13 +248,9 @@
 }
 .header-Help .header-HelpNav ul {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-}
-.header-Help .header-HelpNav ul img {
-  width: 30px;
-  height: 30px;
-  margin: 0px 10px 0px 0px;
+  list-style: none;
 }
 .header-Help .header-HelpNav ul li a, .header-Help .header-HelpNav ul .nav-compras-help li {
   color: black;
@@ -264,7 +283,7 @@
 }
 
 /* MEDIA QUERIES */
-/*pantalla mayores a 768px{*/
+/* pantalla mayores a 768px */
 @media (min-width: 768px) {
   .hidden-headerSM-Until {
     display: none;
@@ -292,6 +311,7 @@
     width: 100%;
     border-radius: 30px;
     margin-top: 10px;
+    border: 2px solid #fff;
   }
   .headerSM-Onwards .row #btnSearch {
     border-radius: 20px;
@@ -299,6 +319,7 @@
     width: 80px;
     margin: 10px 0px 0px 0px;
     background-color: #fff;
+    border: 2px solid #fff;
   }
   .headerSM-Onwards .row .imgHeader {
     display: flex;
@@ -335,7 +356,7 @@
     display: grid;
     grid-auto-rows: auto;
     grid-column-gap: 20px;
-    grid-template-columns: 15% 85%;
+    /*grid-template-columns: 15% 85%; */
     grid-auto-rows: auto;
     grid-template-rows: 1fr;
     margin-bottom: 10px;
@@ -389,9 +410,6 @@
     justify-content: center;
     margin-top: 5%;
   }
-  .footer-box span {
-    width: 25%;
-  }
   /*HistoryCompras*/
   .sectionFilterSM {
     display: grid;
@@ -415,7 +433,7 @@
     margin-bottom: 10px;
   }
 }
-/*pantalla menores a 767px*/
+/* pantalla menores a 767px */
 @media (max-width: 767px) {
   .hidden-headerSM-Onwards {
     display: none !important;
@@ -462,5 +480,32 @@
     width: 250px;
     border-radius: 15px;
     margin-bottom: 10px;
+  }
+}
+/* pantalla mayores a 991 */
+@media (min-width: 991px) {
+  #navList {
+    display: none;
+  }
+  .cbxOptions {
+    margin: 0 0 0px;
+  }
+  .sectionSM-Onwards .btn-custom {
+    background-color: rgb(106, 196, 252);
+    margin: 0px 0px 3px 5px;
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    color: #000000;
+    text-decoration: none;
+  }
+  .filtrosSM-Onwards {
+    margin-top: 20px;
+  }
+  .filtrosSM-Onwards h1 {
+    margin-right: 15px;
+  }
+  #inputSearch, #btnSearch, .btnLink {
+    border: 2px solid #fff;
   }
 }/*# sourceMappingURL=main.css.map */

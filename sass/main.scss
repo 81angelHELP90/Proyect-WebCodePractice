@@ -1,17 +1,10 @@
-/* @import "./node_modules/bootstrap/scss/bootstrap.scss"; */
-/* Constants */
-$backgroundColor: rgb(106, 196, 252);
-$blackColor: #000000;
-$whiteColor: #fff;
+@import "_variables"; 
+@import "_mixins";
+
 /* Globales */
 .position-general {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
+    @include flex_model(flex, row, wrap, space-around, center,  stretch);
+    
     #logo{
         width: 65px;
         height: 65px;
@@ -41,14 +34,12 @@ $whiteColor: #fff;
     }
 }
 .inputSearch{
-    display: flex;
+    @include flex_model(flex, row, nowrap, flex-end, center, stretch);
     border-radius: 25px;
     width: calc(80% - 50px);
     height: 30px;
     background-color: $whiteColor;
-    justify-content: flex-end;
-    align-items: center;
-
+    
     img{
         width: 20px;
         height: 20px;
@@ -64,23 +55,18 @@ $whiteColor: #fff;
     }
 
     input:focus{
-        border: 0px solid green;
+        border: 0px solid $green;
         outline: none;    
     }
 }
 .headerGlobal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex_model(flex, row, nowrap, center, center, stretch);
     background-color: $backgroundColor;
 }
 /* Main */
 #section-login {
+    @include flex_model(flex, row, wrap, center, center, stretch);
     padding-top: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 .login-Box {
 
@@ -126,7 +112,7 @@ $whiteColor: #fff;
     }
 }
 .card-body img {
-    width: 85%;
+    width: 65%;
 }
 .img-carousel{
     width: 320px;
@@ -139,27 +125,18 @@ $whiteColor: #fff;
     border: 2px solid $backgroundColor;
 }
 #sectionCreateAccount {
+    @include flex_model(flex, row, wrap, center, center, center);
+
     border-radius: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
 }
 .createAccount-Box {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
+    @include flex_model(flex, column, wrap, space-evenly, center, center);
 }
 .btnLink{
+    @include flex_model(flex, row, nowrap, center, center, stretch);
+
     width: 120px;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $backgroundColor;
     border-radius: 20px;
     border: 2px solid $whiteColor;
@@ -177,8 +154,8 @@ $whiteColor: #fff;
 }
 /* Footer */
 .footer-box {
-    display: flex;
-    align-items: center;
+    @include flex_model(flex, row, nowrap, flex-start, center, stretch);
+
     margin-top: 25%;
 }
 /*HISTORIAL DE COMPRAS*/
@@ -191,10 +168,7 @@ $whiteColor: #fff;
     grid-column-gap: auto;
 
     .headerHistoryImg {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex_model(flex, column, nowrap, center, center, stretch);
 
         img{
             width: 70px;
@@ -204,8 +178,7 @@ $whiteColor: #fff;
     }
 
     .headerHistoryNav {
-        display: flex;
-        align-items: flex-start;
+        @include flex_model(flex, row, nowrap, flex-start, stretch, stretch);
 
         img {
             width: 35px;
@@ -238,9 +211,15 @@ $whiteColor: #fff;
     grid-row-gap: 2px;
 
     .header-HelpLogo {
+        /*
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+        align-content: stretch;
+        */
+        @include flex_model(flex, row, nowrap, center, center, stretch);
 
         img {
             width: 60px;
@@ -250,9 +229,16 @@ $whiteColor: #fff;
     }
 
     .header-HelpNav ul{
+        /*
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
+        align-content: stretch;
+        */
+        @include flex_model(flex, row, nowrap, space-around, center, stretch);
+        
         list-style: none;
 
         li a, .nav-compras-help li {
@@ -262,18 +248,11 @@ $whiteColor: #fff;
     }
 }
 #section-Help {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	align-content: stretch;
+    @include flex_model(flex, row, wrap, space-evenly, center, stretch);
     
     .cardHelp {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        @include flex_model(flex, column, wrap, center, center, stretch);
+
         border-radius: 15px;
         border: 1px solid $backgroundColor;
         box-shadow: 5px -3px 10px 5px rgb(193, 224, 246);
@@ -296,9 +275,8 @@ $whiteColor: #fff;
     }
 
     .hidden-headerSM-Onwards{
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        @include flex_model(flex, row, nowrap, center, stretch, stretch);
+        width: auto
     }
 
     .headerSM-Onwards {
@@ -306,14 +284,12 @@ $whiteColor: #fff;
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
-        grid-template-rows: repeat(2, (65px, 45px));/*1fr 1fr;*/
+        grid-template-rows: repeat(2, (65px, 45px));
         grid-column-gap: auto;
         grid-row-gap: 10px;
 
         .row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex_model(flex, row, nowrap, center, center, stretch);
 
             #inputSearch{
                 width: 100%;
@@ -332,9 +308,7 @@ $whiteColor: #fff;
             }
 
             .imgHeader {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
+                @include flex_model(flex, row, nowrap, flex-end, center, stretch);
             }
 
             img {
@@ -345,11 +319,8 @@ $whiteColor: #fff;
         }
 
         .nav-ulHome {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-end;
+            @include flex_model(flex, row, wrap, space-between, flex-end, stretch);
+
             list-style: none;
 
             li a {
@@ -374,18 +345,12 @@ $whiteColor: #fff;
         display: grid;
         grid-auto-rows: auto;
         grid-column-gap: 20px;
-        /*grid-template-columns: 15% 85%; */
         grid-auto-rows: auto;
         grid-template-rows: 1fr; 
         margin-bottom: 10px;
 
         .filtrosSM-Onwards, .filtrosSM-OnwardsCbx, .IconSM-Onwards{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
+            @include flex_model(flex, row, wrap, center, center, center);
 
             img {
                 width: 35px;
@@ -411,7 +376,7 @@ $whiteColor: #fff;
 
     .cardsSM-Onwards{
         display: grid;
-        grid-template-columns: repeat(3, minmax(170px, 1fr));
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
         gap: 5px;
 
         .card{
@@ -434,9 +399,8 @@ $whiteColor: #fff;
     }
 
     .footer-box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex_model(flex, row, nowrap, center, center, stretch);
+
         margin-top: 5%;
     }
 
@@ -488,9 +452,7 @@ $whiteColor: #fff;
 
     /*Historial compras*/
     .sectionSM-Until {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex_model(flex, row, nowrap, center, center, stretch);
 
         input, select, button {
             width: 120px;
@@ -506,9 +468,7 @@ $whiteColor: #fff;
     }
 
     .footer-box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex_model(flex, row, nowrap, center, center, stretch);
     }
 
     .cardHelp {

@@ -1,13 +1,11 @@
-/* @import "./node_modules/bootstrap/scss/bootstrap.scss"; */
-/* Constants */
 /* Globales */
 .position-general {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap;
+  align-items: center;
+  align-content: stretch;
 }
 .position-general #logo {
   width: 65px;
@@ -39,12 +37,15 @@
 
 .inputSearch {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: stretch;
   border-radius: 25px;
   width: calc(80% - 50px);
   height: 30px;
   background-color: #fff;
-  justify-content: flex-end;
-  align-items: center;
 }
 .inputSearch img {
   width: 20px;
@@ -65,18 +66,23 @@
 
 .headerGlobal {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  align-content: stretch;
   background-color: rgb(106, 196, 252);
 }
 
 /* Main */
 #section-login {
-  padding-top: 150px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: stretch;
+  padding-top: 150px;
 }
 
 .login-Box input {
@@ -121,7 +127,7 @@
 }
 
 .card-body img {
-  width: 85%;
+  width: 65%;
 }
 
 .img-carousel {
@@ -137,12 +143,13 @@
 }
 
 #sectionCreateAccount {
-  border-radius: 30px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
   align-items: center;
+  align-content: center;
+  border-radius: 30px;
 }
 
 .createAccount-Box {
@@ -155,11 +162,14 @@
 }
 
 .btnLink {
-  width: 120px;
-  height: 30px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  align-content: stretch;
+  width: 120px;
+  height: 30px;
   background-color: rgb(106, 196, 252);
   border-radius: 20px;
   border: 2px solid #fff;
@@ -179,7 +189,11 @@
 /* Footer */
 .footer-box {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: center;
+  align-content: stretch;
   margin-top: 25%;
 }
 
@@ -195,8 +209,10 @@
 .headerHistory .headerHistoryImg {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  align-content: stretch;
 }
 .headerHistory .headerHistoryImg img {
   width: 70px;
@@ -205,7 +221,11 @@
 }
 .headerHistory .headerHistoryNav {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
 }
 .headerHistory .headerHistoryNav img {
   width: 35px;
@@ -237,9 +257,20 @@
   grid-row-gap: 2px;
 }
 .header-Help .header-HelpLogo {
+  /*
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  align-content: stretch;
+  */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
 }
 .header-Help .header-HelpLogo img {
   width: 60px;
@@ -247,9 +278,20 @@
   margin: 10px 0px 0px 0px;
 }
 .header-Help .header-HelpNav ul {
+  /*
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+  align-content: stretch;
+  */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
   list-style: none;
 }
 .header-Help .header-HelpNav ul li a, .header-Help .header-HelpNav ul .nav-compras-help li {
@@ -259,7 +301,7 @@
 
 #section-Help {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
@@ -267,9 +309,11 @@
 }
 #section-Help .cardHelp {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: stretch;
   border-radius: 15px;
   border: 1px solid rgb(106, 196, 252);
   box-shadow: 5px -3px 10px 5px rgb(193, 224, 246);
@@ -290,22 +334,29 @@
   }
   .hidden-headerSM-Onwards {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
-    width: 100%;
+    align-items: stretch;
+    align-content: stretch;
+    width: auto;
   }
   .headerSM-Onwards {
     background-color: rgb(106, 196, 252);
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    grid-template-rows: repeat(2, 65px, 45px); /*1fr 1fr;*/
+    grid-template-rows: repeat(2, 65px, 45px);
     grid-column-gap: auto;
     grid-row-gap: 10px;
   }
   .headerSM-Onwards .row {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
+    align-content: stretch;
   }
   .headerSM-Onwards .row #inputSearch {
     width: 100%;
@@ -323,8 +374,11 @@
   }
   .headerSM-Onwards .row .imgHeader {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: flex-end;
+    align-items: center;
+    align-content: stretch;
   }
   .headerSM-Onwards .row img {
     width: 60px;
@@ -337,6 +391,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
+    align-content: stretch;
     list-style: none;
   }
   .headerSM-Onwards .nav-ulHome li a {
@@ -356,7 +411,6 @@
     display: grid;
     grid-auto-rows: auto;
     grid-column-gap: 20px;
-    /*grid-template-columns: 15% 85%; */
     grid-auto-rows: auto;
     grid-template-rows: 1fr;
     margin-bottom: 10px;
@@ -388,7 +442,7 @@
   }
   .cardsSM-Onwards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(170px, 1fr));
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
     gap: 5px;
   }
   .cardsSM-Onwards .card {
@@ -406,8 +460,11 @@
   }
   .footer-box {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
+    align-content: stretch;
     margin-top: 5%;
   }
   /*HistoryCompras*/
@@ -452,8 +509,11 @@
   /*Historial compras*/
   .sectionSM-Until {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    align-content: stretch;
   }
   .sectionSM-Until input, .sectionSM-Until select, .sectionSM-Until button {
     width: 120px;
@@ -465,8 +525,11 @@
   }
   .footer-box {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
+    align-content: stretch;
   }
   .cardHelp {
     width: 90%;
